@@ -89,3 +89,19 @@ class Grid:
         )
         self.cells.append(cell)
         return cell
+    
+with Grid("1 1 1") as grid:
+        grid.cell(
+            class_="a",
+            grid_column_start=2,
+            grid_column_end=3,
+            grid_row_start=1,
+            grid_row_end=2,
+        ).markdown("codigo")
+        grid.cell("b", 2, 3, 2, 3).text("codigo")
+        grid.cell("e", 3, 4, 1, 2).markdown(
+            "Try changing the **block container style** in the sidebar!"
+        )
+        grid.cell("f", 1, 3, 3, 4).text(
+            "The cell to the right is a matplotlib svg image"
+        )
