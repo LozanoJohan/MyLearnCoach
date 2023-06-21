@@ -1,0 +1,88 @@
+{
+    "CourseraCourses": [
+        {
+            "url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+            "name": "Google Cybersecurity",
+            "skills": "Habilidades que obtendr\u00e1s: Security Engineering, Computer Networking, Network Security, Operating Systems, Computer Programming, Software Security, Statistical Programming, System Security, Computer Security Incident Management, Python Programming, Finance, Regulations and Compliance, Risk Management, Security Software, Security Strategy, Theoretical Computer Science, Cloud Computing, Cyberattacks, Human Computer Interaction, Software Architecture, Software Engineering, User Experience, Business Psychology, Cloud Infrastructure, Computer Architecture, Computer Programming Tools, Cryptography, Culture, Data Management, Databases, Decision Making, Entrepreneurship, Human Resources, Leadership and Management, Linux, Network Architecture, Network Model, Probability & Statistics, SQL, Statistical Tests, Accounting, Advertising, Audit, Communication, Computational Logic, Computational Thinking, Database Design, General Accounting, Journalism, Marketing, Mathematics, Operations Management, Other Programming Languages, Planning, Strategy and Operations, Supply Chain and Logistics",
+            "score": "4.9",
+            "reviews": "(2.9k rese\u00f1as)"
+        },
+        {
+            "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+            "name": "Google Data Analytics",
+            "skills": "Habilidades que obtendr\u00e1s: Data Analysis, Data Science, Statistical Programming, Business Analysis, SQL, Spreadsheet Software, Business, Data Visualization, Data Management, R Programming, Exploratory Data Analysis, Statistical Visualization, Communication, Statistical Analysis, Data Analysis Software, Business Communication, Data Structures, Data Visualization Software, Tableau Software, Big Data, Cloud Computing, Collaboration, Conflict Management, Critical Thinking, Customer Analysis, General Statistics, Leadership and Management, Plot (Graphics), Probability & Statistics, Small Data, Algorithms, Application Development, Budget Management, Computational Logic, Computer Architecture, Computer Networking, Computer Programming, Computer Programming Tools, Cryptography, Data Mining, Data Model, Database Administration, Database Design, Databases, Decision Making, Design and Product, Distributed Computing Architecture, Entrepreneurship, Extract, Transform, Load, Feature Engineering, Finance, Full-Stack Web Development, Interactive Data Visualization, Machine Learning, Mathematical Theory & Analysis, Mathematics, Network Security, Other Programming Languages, Problem Solving, Product Design, Professional Development, Programming Principles, Project Management, Research and Design, Security Engineering, Security Strategy, Software Engineering, Software Security, Storytelling, Theoretical Computer Science, Visual Design, Visualization (Computer Graphics), Web Development",
+            "score": "4.8",
+            "reviews": "(117.2k rese\u00f1as)"
+        },
+        {
+            "url": "https://www.coursera.org/professional-certificates/google-project-management",
+            "name": "Google Project Management:",
+            "skills": "Habilidades que obtendr\u00e1s: Project Management, Strategy and Operations, Leadership and Management, Communication, Collaboration, Agile Software Development, Entrepreneurship, Software Engineering, Business Communication, Scrum (Software Development), Planning, Supply Chain and Logistics, Business Psychology, Change Management, Finance, Organizational Development, Product Management, Risk Management, Budget Management, Conflict Management, Design and Product, Human Resources, Influencing, Storytelling, Writing, Application Development, Business Process Management, Culture, Emotional Intelligence, Estimation, Leadership Development, Marketing, Negotiation, Operations Management, Operations Research, People Management, Probability & Statistics, Problem Solving, Procurement, Product Design, Product Development, Public Relations, Research and Design, Sales, Software Engineering Tools, Software Testing, Statistical Tests, Strategy, Supply Chain Systems, User Experience, Vendor Management",
+            "score": "4.8",
+            "reviews": "(85.3k rese\u00f1as)"
+        },
+        {
+            "url": "https://www.coursera.org/professional-certificates/google-it-support",
+            "name": "Google IT Support",
+            "skills": "Habilidades que obtendr\u00e1s: Operating Systems, Computer Networking, System Software, Network Model, Security Engineering, Network Security, Computer Architecture, Cryptography, Cyberattacks, Computer Security Incident Management, Networking Hardware, Network Architecture, Business Communication, Communication, Hardware Design, Mathematics, Security Strategy, Writing, Business Analysis, Business Psychology, Computer Graphics, Computer Programming, Computer Programming Tools, Computer Security Models, Databases, Distributed Computing Architecture, Entrepreneurship, Graphic Design, Linux, Other Programming Languages, Process Analysis, Software Engineering, Software Testing, Theoretical Computer Science, Web Development, Web Development Tools, Cloud Computing, Cloud Platforms, Cloud Storage, Data Architecture, Data Management, Database Administration, Database Application, Emotional Intelligence, Human Computer Interaction, Leadership and Management, Marketing, Microarchitecture, Planning, Problem Solving, Product Lifecycle, Sales, Security Software, Software As A Service, Software Security, Strategy, Strategy and Operations, Supply Chain and Logistics, System Programming, System Security, Systems Design, Virtual Reality",
+            "score": "4.8",
+            "reviews": "(171.9k rese\u00f1as)"
+        },
+        {
+            "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+            "name": "Google UX Design",
+            "skills": "Habilidades que obtendr\u00e1s: Human Computer Interaction, User Experience, User Experience Design, Design and Product, Research and Design, Web Design, Web Development, Collaboration, Computer Science, Leadership and Management, Market Research, Software Engineering, Software Testing, User Research, Web Development Tools, Brand Management, Change Management, Communication, Computer Graphics, Computer Programming, Emotional Intelligence, Entrepreneurship, Interactive Design, Marketing, Marketing Design, Planning, Problem Solving, Product Design, Professional Development, Programming Principles, Social Media, Accounting, Business Analysis, Business Communication, Business Psychology, Data Analysis, Finance, Financial Analysis, Investment Management, Mobile Development, Operating Systems, Product Development, Software Architecture, Supply Chain and Logistics, Systems Design, Theoretical Computer Science, Visual Design",
+            "score": "4.8",
+            "reviews": "(65.6k rese\u00f1as)"
+        },
+        {
+            "url": "https://www.coursera.org/professional-certificates/ibm-data-science",
+            "name": "IBM Data Science",
+            "skills": "Habilidades que obtendr\u00e1s: Python Programming, Data Science, Data Analysis, Data Structures, Statistical Programming, Machine Learning, Data Mining, Regression, Machine Learning Algorithms, Data Visualization, General Statistics, Basic Descriptive Statistics, SQL, Applied Machine Learning, Statistical Analysis, Computer Programming Tools, Data Analysis Software, Machine Learning Software, Software Visualization, Databases, Programming Principles, Exploratory Data Analysis, Computer Programming, Statistical Visualization, Algebra, Data Management, Database Theory, Data Visualization Software, R Programming, Statistical Machine Learning, Statistical Tests, Deep Learning, Probability & Statistics, Extract, Transform, Load, Plot (Graphics), Devops Tools, SPSS, Estimation, Interactive Data Visualization, Algorithms, Artificial Neural Networks, Database Application, Geovisualization, Reinforcement Learning, Theoretical Computer Science, Big Data, Business Analysis, Cloud Computing, Cloud Engineering, Cloud Platforms, Cloud Storage, Computational Logic, Correlation And Dependence, Database Administration, Econometrics, Entrepreneurship, Feature Engineering, IBM Cloud, Marketing, Mathematical Theory & Analysis, Mathematics, Spreadsheet Software, Storytelling, Supply Chain Systems, Supply Chain and Logistics, Writing",
+            "score": "4.6",
+            "reviews": "(111.8k rese\u00f1as)"
+        },
+        {
+            "url": "https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce",
+            "name": "Google Digital Marketing & E-commerce",
+            "skills": "Habilidades que obtendr\u00e1s: Digital Marketing, Marketing, Marketing Management, Media Strategy & Planning, Sales, E-Commerce, Communication, Data Analysis, Social Media, Search Engine Optimization, Advertising, Leadership and Management, Strategy and Operations, Business Communication, Customer Success, Professional Development, Research and Design, Survey Creation, Data Visualization, Entrepreneurship, Persona Research, Storytelling, Strategy, Web Design, Web Development, Web Development Tools, Brand Management, Writing, Accounting, Back-End Web Development, Computer Networking, Customer Relationship Management, Customer Support, Data Management, Finance, Financial Analysis, Human Resources, Market Analysis, Market Research, Mathematical Theory & Analysis, Mathematics, Networking Hardware, Supply Chain and Logistics",
+            "score": "4.8",
+            "reviews": "(15.5k rese\u00f1as)"
+        },
+        {
+            "url": "https://www.coursera.org/professional-certificates/ibm-data-analyst",
+            "name": "IBM Data Analyst",
+            "skills": "Habilidades que obtendr\u00e1s: Data Analysis, Python Programming, Data Visualization, Exploratory Data Analysis, Basic Descriptive Statistics, Data Structures, Statistical Programming, Data Science, Statistical Visualization, Plot (Graphics), Data Management, General Statistics, SQL, Databases, Business Analysis, Microsoft Excel, Spreadsheet Software, Data Mining, Statistical Analysis, Programming Principles, Probability & Statistics, Regression, Machine Learning, Algebra, Computer Programming, Data Analysis Software, Database Theory, Probability Distribution, Applied Machine Learning, Statistical Tests, Big Data, Correlation And Dependence, Data Visualization Software, Estimation, NoSQL, Geovisualization, ArcGIS, Cloud Computing, Data Warehousing, Database Application, Extract, Transform, Load, HTML and CSS, Knitr, Mathematics, Minitab, PostgreSQL, R Programming, SAS (Software), SPSS, Apache, Cloud Engineering, Cloud Platforms, Cloud Storage, Computational Logic, Computer Programming Tools, Database Administration, Econometrics, IBM Cloud, Interactive Data Visualization, Leadership and Management, Machine Learning Algorithms, Mathematical Theory & Analysis, Operating Systems, Professional Development, Statistical Machine Learning, System Programming, Theoretical Computer Science",
+            "score": "4.6",
+            "reviews": "(65.5k rese\u00f1as)"
+        },
+        {
+            "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+            "name": "Machine Learning",
+            "skills": "Habilidades que obtendr\u00e1s: Machine Learning, Probability & Statistics, Machine Learning Algorithms, General Statistics, Theoretical Computer Science, Algorithms, Applied Machine Learning, Artificial Neural Networks, Regression, Econometrics, Computer Programming, Deep Learning, Python Programming, Statistical Programming, Mathematics, Tensorflow, Data Management, Data Structures, Statistical Machine Learning, Reinforcement Learning, Probability Distribution, Mathematical Theory & Analysis, Data Analysis, Data Mining, Linear Algebra, Computer Vision, Calculus, Feature Engineering, Bayesian Statistics, Operations Research, Research and Design, Strategy and Operations, Computational Logic, Accounting, Communication",
+            "score": "4.9",
+            "reviews": "(12.3k rese\u00f1as)"
+        },
+        {
+            "url": "https://www.coursera.org/specializations/introduction-data-science",
+            "name": "Introduction to Data Science",
+            "skills": "Habilidades que obtendr\u00e1s: Data Science, Data Structures, SQL, Computer Programming Tools, Data Analysis Software, Machine Learning Software, Software Visualization, Statistical Programming, Databases, Python Programming, Database Theory, Data Visualization Software, R Programming, Data Management, Data Mining, Regression, Devops Tools, Machine Learning Algorithms, SPSS, Basic Descriptive Statistics, Data Analysis, Database Application, Applied Machine Learning, Artificial Neural Networks, Big Data, Cloud Computing, Cloud Engineering, Cloud Platforms, Cloud Storage, Computer Programming, Database Administration, Deep Learning, Feature Engineering, General Statistics, IBM Cloud, Machine Learning, Marketing, Probability & Statistics, Statistical Machine Learning, Storytelling, Writing",
+            "score": "4.6",
+            "reviews": "(80.7k rese\u00f1as)"
+        },
+        {
+            "url": "https://www.coursera.org/professional-certificates/devops-and-software-engineering",
+            "name": "IBM DevOps and Software Engineering",
+            "skills": "Habilidades que obtendr\u00e1s: Software Engineering, DevOps, Cloud Computing, Computer Programming, Python Programming, Programming Principles, Kubernetes, Web Development, Continuous Delivery, Continuous Integration, Data Analysis, Operating Systems, Other Web Frameworks, Software Engineering Tools, Software Testing, Agile Software Development, Data Structures, IBM Cloud, Security Engineering, Algebra, Linux, Cloud Applications, Cloud Engineering, Application Development, Cloud Infrastructure, Full-Stack Web Development, Network Security, Software Security, Advertising, Communication, Computer Architecture, Computer Networking, Computer Programming Tools, Devops Tools, Distributed Computing Architecture, Docker (Software), Marketing, Network Model, Networking Hardware, Public Relations, Scrum (Software Development), System Programming, System Software, Cloud Management, Cloud Platforms, Cloud Storage, Software As A Service, Basic Descriptive Statistics, Data Visualization, Data Visualization Software, Design and Product, Exploratory Data Analysis, Front-End Web Development, Leadership and Management, Professional Development, Security Software, Software Architecture, Software Framework, Theoretical Computer Science, Web Development Tools, BlockChain, Collaboration, Computational Logic, Computer Graphics, Finance, Human Computer Interaction, Interactive Design, Journalism, Mathematical Theory & Analysis, Mathematics, Product Design, Product Development, Statistical Programming, Systems Design",
+            "score": "4.6",
+            "reviews": "(39.4k rese\u00f1as)"
+        },
+        {
+            "url": "https://www.coursera.org/specializations/key-technologies-for-business",
+            "name": "Key Technologies for Business",
+            "skills": "Habilidades que obtendr\u00e1s: Data Science, Cloud Computing, Applied Machine Learning, Cloud Engineering, Cloud Infrastructure, Data Mining, Regression, Cloud Applications, Cloud Management, Cloud Platforms, Cloud Storage, DevOps, IBM Cloud, Network Security, Software As A Service, Software Engineering, Basic Descriptive Statistics, Data Analysis, Artificial Neural Networks, Big Data, BlockChain, Computer Architecture, Computer Graphics, Computer Programming, Computer Vision, Deep Learning, Finance, General Statistics, Human Computer Interaction, Interactive Design, Machine Learning, Machine Learning Algorithms, Operating Systems, Probability & Statistics, Security Engineering, Software Architecture, Software Framework, Storytelling, System Programming, Theoretical Computer Science, Writing",
+            "score": "4.7",
+            "reviews": "(77k rese\u00f1as)"
+        }
+    ]
+}

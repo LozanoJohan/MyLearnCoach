@@ -1,30 +1,31 @@
 import streamlit as st
-from controller import Controller
+from controllers.controller import Controller
 
 class View:
     def __init__(self):
         self.controller = Controller()
+        self.data = self.controller.get_data()
         
         self.quit_ugly_widgets()
 
-    def show(self, controller, model):
+    def show(self):
         st.title('MyLearnCoach')
 
         prompt = st.text_input('¿En que te puedo ayudar?') 
     
         if prompt:
-            controller.process_input(prompt)
+            self.controller.process_input(prompt)
 
         # Sección de cursos
         st.header("Cursos")
 
         # Mostrar todos los cursos en 3 columnas
         i = 0
-        for rows in range(len(data)//3):
-            for col in st.columns(3):
-                # Escribir nombre y código
-                col.write(data[i]["nombre"] + data[i]["codigo"])
-                i += 1
+        # for rows in range(len(self.data['SIACourses'])//3):
+        #     for col in st.columns(3):
+        #         # Escribir nombre y código
+        #         col.write(self.data['SIACourses'][i]["name"] + self.data['SIACourses'][i]["code"])
+        #         i += 1
     
     def quit_ugly_widgets(self):
         # Quita algunos elementos molestos

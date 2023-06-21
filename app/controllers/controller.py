@@ -1,8 +1,10 @@
-from sia_scrapper import SiaScrapper
-from coursera_scrapper import CourseraScrapper
+from controllers.apikey import apikey
+
+from controllers.sia_scrapper import SiaScrapper
+from controllers.coursera_scrapper import CourseraScrapper
+
 import json
 import os
-from apikey import apikey
 import streamlit as st 
 
 from langchain.llms import OpenAI
@@ -10,11 +12,10 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
 
 class Controller:
-    def __init__(self, model, view):
-        self.model = model
-        self.view = view
+    def __init__(self): # , view):
+        # self.view = view
 
-        self.view.show()
+        # self.view.show()
 
         os.environ['OPENAI_API_KEY'] = apikey
         self.set_llm()
@@ -30,7 +31,7 @@ class Controller:
 
         return courses
     
-    def fetch_coursera_courses():
+    def fetch_coursera_courses(self):
         coursera = CourseraScrapper()
         courses = coursera.scrap()
 
@@ -41,15 +42,9 @@ class Controller:
 
         return courses
     
-    def get_sia_courses():
-        with open('sia_courses.json', 'r') as f:
-            courses = json.load(f)
-            f.close()
-
-        return courses
-
-    def get_coursera_courses():
-        with open('coursera_courses.json', 'r') as f:
+    def get_data(self):
+        # Read courses from JSON file
+        with open('D:/Users/Usuario/Documents/GitHub/MyLearnCoach/app/data/courses_data.json', 'r') as f:
             courses = json.load(f)
             f.close()
 
@@ -64,19 +59,20 @@ class Controller:
 
         self.script_template = PromptTemplate(
             input_variables = ['title'], 
-            template='dame los temas que se necesitarian para entender la siguiente informacion INFORMACION: {title}'
+            template = 'Escribe la o las palabras principales para poder buscar acerca de este tema: {title}' #'dame los temas que se necesitarian para entender la siguiente informacion INFORMACION: {title}'
         )
 
         self.llm = OpenAI(temperature=0.9) 
 
         self.title_chain = LLMChain(llm = self.llm, prompt = self.title_template, verbose = True, output_key = 'title')
         self.script_chain = LLMChain(llm = self.llm, prompt = self.script_template, verbose = True, output_key = 'script')
+        
         self.sequential_chain = SequentialChain(chains = [self.title_chain, self.script_chain], 
                                                 input_variables = ['topic'], 
                                                 output_variables = ['title', 'script'], 
                                                 verbose = True)
     
-    def process_imput(self, input):
+    def process_input(self, input):
 
         response = self.sequential_chain({'topic': input})
         st.write(response['title'])
