@@ -1,4 +1,5 @@
 import json
+import logging
 from selenium.webdriver.support.ui import Select
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -70,7 +71,7 @@ class SiaScrapper:
 
         links = self.wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'af_commandLink')))
 
-        for i in range(len(links) - 1):
+        for i in range(len(links) - 2):
             desired_link = links[i]
             print('Links: ', len(links), 'Iterción: ', i)
             
@@ -97,7 +98,27 @@ class SiaScrapper:
             
             credits_element = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '.row.detass-creditos.af_panelGroupLayout')))
             credits = credits_element.text.split(':')[1] 
-            
+
+            groups = []
+
+            try:
+                groups_elements = self.wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'af_showDetailHeader_title-text0')))
+                professors_elements = self.wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'strong')))
+                horarios_aulas_elements = self.wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.salto margin-l.af_panelGroupLayout')))
+                
+                for i in range(len(groups_elements)):
+                    group = groups_elements[i].text
+                    professor = professors_elements[i].text
+                    horario_aula = horarios_aulas_elements[i].text
+                    
+                    groups.append({
+                        'group': group,
+                        'professor': professor,
+                        'horario_aula': horario_aula
+                        })
+            except:
+                print('Error al obtener los grupos')
+                
             print(name, code, type, credits + '\n---------------------')
 
             volver_btn = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'af_button_link')))
@@ -110,13 +131,29 @@ class SiaScrapper:
                 'name': name,
                 'code': code,
                 'type': type,
-                'credits': credits
+                'credits': credits,
+                'groups': groups
             }            
 
             self.all_courses['SIACourses'].append(course)
             print(self.all_courses)
 
-            with open('D:/Users/Usuario/Documents/GitHub/MyLearnCoach/app/data/courses_data.json', 'w') as f:
-                json.dump(self.all_courses, f, indent = 4)
+            json_route = 'D:/Users/Usuario/Documents/GitHub/MyLearnCoach/app/data/courses_data.json'
+
+            with open(json_route, 'r') as f:
+                data = json.load(f)
+                for _course in data['SIACourses']:
+                    for key, _course_data in _course.items():
+                        #print('probando.... ',type(key), type(code), key, code)
+                        print(str(key) == code)
+                        if str(key) == code:
+                            _course_data = course
+                            break
+                else: 
+                    data['SIACourses'].append({code: course})
+
+            with open(json_route, 'w') as f:
+                json.dump(data, f, indent = 4)
+                f.close()
     
         return self.all_courses # Aun no funciona :(

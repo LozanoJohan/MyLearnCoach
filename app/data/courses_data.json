@@ -84,5 +84,498 @@
             "score": "4.7",
             "reviews": "(77k rese\u00f1as)"
         }
+    ],
+    "SIACourses": [
+        {
+            "L000022": {
+                "name": "Agua",
+                "code": "L000022",
+                "type": "FUND. OPTATIVA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000131": {
+                "name": "Biogeograf\u00eda",
+                "code": "L000131",
+                "type": "DISCIPLINAR OPTATIVA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000207": {
+                "name": "BIOLOGIA MOLECULAR",
+                "code": "L000207",
+                "type": "DISCIPLINAR OPTATIVA",
+                "credits": "4"
+            }
+        },
+        {
+            "1000004-L": {
+                "name": "C\u00e1lculo diferencial",
+                "code": "1000004-L",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "4"
+            }
+        },
+        {
+            "L000107": {
+                "name": "Cartograf\u00eda general",
+                "code": "L000107",
+                "type": "FUND. OPTATIVA",
+                "credits": "4"
+            }
+        },
+        {
+            "L000114": {
+                "name": "Ciencias de la tierra",
+                "code": "L000114",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000187": {
+                "name": "Comunicaci\u00f3n comunitaria",
+                "code": "L000187",
+                "type": "FUND. OPTATIVA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000175": {
+                "name": "Culturas y desarrollo",
+                "code": "L000175",
+                "type": "FUND. OPTATIVA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000160": {
+                "name": "Culturas y poderes",
+                "code": "L000160",
+                "type": "FUND. OPTATIVA",
+                "credits": "2"
+            }
+        },
+        {
+            "L000172": {
+                "name": "Culturas y territorios",
+                "code": "L000172",
+                "type": "FUND. OPTATIVA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000006": {
+                "name": "Derechos Humanos y Equidad",
+                "code": "L000006",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "2"
+            }
+        },
+        {
+            "L000030": {
+                "name": "Desarrollo y morfofisiolog\u00eda",
+                "code": "L000030",
+                "type": "DISCIPLINAR OBLIGATORIA",
+                "credits": "6"
+            }
+        },
+        {
+            "L000159": {
+                "name": "Diversidad Cultural",
+                "code": "L000159",
+                "type": "FUND. OPTATIVA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000032": {
+                "name": "Ecolog\u00eda de comunidades y ecosistemas",
+                "code": "L000032",
+                "type": "DISCIPLINAR OBLIGATORIA",
+                "credits": "6"
+            }
+        },
+        {
+            "L000081": {
+                "name": "Estadistica Descriptiva y exploratoria",
+                "code": "L000081",
+                "type": "FUND. OPTATIVA",
+                "credits": "4"
+            }
+        },
+        {
+            "L000029": {
+                "name": "Evoluci\u00f3n",
+                "code": "L000029",
+                "type": "DISCIPLINAR OBLIGATORIA",
+                "credits": "4"
+            }
+        },
+        {
+            "L000179": {
+                "name": "Expresiones artisticas",
+                "code": "L000179",
+                "type": "FUND. OPTATIVA",
+                "credits": "2"
+            }
+        },
+        {
+            "L000027": {
+                "name": "Fundamentos de ecologia de poblaciones",
+                "code": "L000027",
+                "type": "DISCIPLINAR OBLIGATORIA",
+                "credits": "4"
+            }
+        },
+        {
+            "L000002": {
+                "name": "Fundamentos de \u00c9tica",
+                "code": "L000002",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "2"
+            }
+        },
+        {
+            "L000005": {
+                "name": "Fundamentos de las Ciencias Experimentales",
+                "code": "L000005",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "2"
+            }
+        },
+        {
+            "L000001": {
+                "name": "Fundamentos de las Ciencias Sociales",
+                "code": "L000001",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000007": {
+                "name": "Fundamentos de Programaci\u00f3n de Computadores",
+                "code": "L000007",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000012": {
+                "name": "Gen\u00e9tica",
+                "code": "L000012",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "4"
+            }
+        },
+        {
+            "L000028": {
+                "name": "Gen\u00e9tica de poblaciones",
+                "code": "L000028",
+                "type": "DISCIPLINAR OBLIGATORIA",
+                "credits": "4"
+            }
+        },
+        {
+            "L000104": {
+                "name": "Geograf\u00eda f\u00edsica",
+                "code": "L000104",
+                "type": "FUND. OPTATIVA",
+                "credits": "4"
+            }
+        },
+        {
+            "L000105": {
+                "name": "Geograf\u00eda humana",
+                "code": "L000105",
+                "type": "FUND. OPTATIVA",
+                "credits": "4"
+            }
+        },
+        {
+            "L000245": {
+                "name": "Gerencia y gesti\u00f3n de proyectos",
+                "code": "L000245",
+                "type": "FUND. OPTATIVA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000186": {
+                "name": "Gesti\u00f3n de la comunicaci\u00f3n",
+                "code": "L000186",
+                "type": "FUND. OPTATIVA",
+                "credits": "2"
+            }
+        },
+        {
+            "1000044L": {
+                "name": "Ingl\u00e9s I- Semestral",
+                "code": "1000044L",
+                "type": "NIVELACI\u00d3N",
+                "credits": "3"
+            }
+        },
+        {
+            "1000045L": {
+                "name": "Ingl\u00e9s II- Semestral",
+                "code": "1000045L",
+                "type": "NIVELACI\u00d3N",
+                "credits": "3"
+            }
+        },
+        {
+            "1000046L": {
+                "name": "Ingl\u00e9s III- Semestral",
+                "code": "1000046L",
+                "type": "NIVELACI\u00d3N",
+                "credits": "3"
+            }
+        },
+        {
+            "1000047L": {
+                "name": "ingles IV - Semestral",
+                "code": "1000047L",
+                "type": "NIVELACI\u00d3N",
+                "credits": "3"
+            }
+        },
+        {
+            "L000011": {
+                "name": "Introducci\u00f3n a la Biolog\u00eda - Nivel celular",
+                "code": "L000011",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "8"
+            }
+        },
+        {
+            "L000014": {
+                "name": "Introducci\u00f3n a la Biolog\u00eda de Organismos",
+                "code": "L000014",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "8"
+            }
+        },
+        {
+            "L000010": {
+                "name": "Introducci\u00f3n a la Biolog\u00eda y Ecolog\u00eda",
+                "code": "L000010",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "8"
+            }
+        },
+        {
+            "L000195": {
+                "name": "Investigaci\u00f3n comunitaria",
+                "code": "L000195",
+                "type": "FUND. OPTATIVA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000009": {
+                "name": "Laboratorio principios de bioqu\u00edmica",
+                "code": "L000009",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "4"
+            }
+        },
+        {
+            "L000305": {
+                "name": "Lenguaje y comunicaci\u00f3n",
+                "code": "L000305",
+                "type": "NIVELACI\u00d3N",
+                "credits": "3"
+            }
+        },
+        {
+            "L000004": {
+                "name": "Lenguajes Visuales y Narrativos",
+                "code": "L000004",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "2"
+            }
+        },
+        {
+            "L000306": {
+                "name": "Pensamiento Matem\u00e1tico",
+                "code": "L000306",
+                "type": "NIVELACI\u00d3N",
+                "credits": "3"
+            }
+        },
+        {
+            "L000008": {
+                "name": "Principios de bioqu\u00edmica",
+                "code": "L000008",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "4"
+            }
+        },
+        {
+            "L000013": {
+                "name": "Principios de F\u00edsica",
+                "code": "L000013",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "4"
+            }
+        },
+        {
+            "1000013-L": {
+                "name": "Probabilidad y estad\u00edstica fundamental",
+                "code": "1000013-L",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000228": {
+                "name": "Programaci\u00f3n I",
+                "code": "L000228",
+                "type": "FUND. OPTATIVA",
+                "credits": "3"
+            }
+        },
+        {
+            "L000307": {
+                "name": "Razonamiento num\u00e9rico y variacional",
+                "code": "L000307",
+                "type": "NIVELACI\u00d3N",
+                "credits": "2"
+            }
+        },
+        {
+            "L000033": {
+                "name": "Sistem\u00e1tica y Taxonom\u00eda",
+                "code": "L000033",
+                "type": "DISCIPLINAR OBLIGATORIA",
+                "credits": "6"
+            }
+        },
+        {
+            "L000273": {
+                "name": "Tecnolog\u00edas b\u00e1sicas de mecatr\u00f3nica",
+                "code": "L000273",
+                "type": "FUND. OPTATIVA",
+                "credits": "2"
+            }
+        },
+        {
+            "L000035": {
+                "name": "Trabajo de campo interdisciplinar",
+                "code": "L000035",
+                "type": "DISCIPLINAR OBLIGATORIA",
+                "credits": "8"
+            }
+        },
+        {
+            "L000003": {
+                "name": "Universidad y Sociedad",
+                "code": "L000003",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "2"
+            }
+        },
+        {
+            "L000107": {
+                "name": "Cartograf\u00eda general",
+                "code": "L000107",
+                "type": "FUND. OPTATIVA",
+                "credits": "4",
+                "groups": []
+            }
+        },
+        {
+            "L000114": {
+                "name": "Ciencias de la tierra",
+                "code": "L000114",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "3",
+                "groups": []
+            }
+        },
+        {
+            "L000187": {
+                "name": "Comunicaci\u00f3n comunitaria",
+                "code": "L000187",
+                "type": "FUND. OPTATIVA",
+                "credits": "3",
+                "groups": []
+            }
+        },
+        {
+            "L000175": {
+                "name": "Culturas y desarrollo",
+                "code": "L000175",
+                "type": "FUND. OPTATIVA",
+                "credits": "3",
+                "groups": []
+            }
+        },
+        {
+            "L000160": {
+                "name": "Culturas y poderes",
+                "code": "L000160",
+                "type": "FUND. OPTATIVA",
+                "credits": "2",
+                "groups": []
+            }
+        },
+        {
+            "L000172": {
+                "name": "Culturas y territorios",
+                "code": "L000172",
+                "type": "FUND. OPTATIVA",
+                "credits": "3",
+                "groups": []
+            }
+        },
+        {
+            "L000006": {
+                "name": "Derechos Humanos y Equidad",
+                "code": "L000006",
+                "type": "FUND. OBLIGATORIA",
+                "credits": "2",
+                "groups": []
+            }
+        },
+        {
+            "L000030": {
+                "name": "Desarrollo y morfofisiolog\u00eda",
+                "code": "L000030",
+                "type": "DISCIPLINAR OBLIGATORIA",
+                "credits": "6",
+                "groups": []
+            }
+        },
+        {
+            "L000159": {
+                "name": "Diversidad Cultural",
+                "code": "L000159",
+                "type": "FUND. OPTATIVA",
+                "credits": "3",
+                "groups": []
+            }
+        },
+        {
+            "L000032": {
+                "name": "Ecolog\u00eda de comunidades y ecosistemas",
+                "code": "L000032",
+                "type": "DISCIPLINAR OBLIGATORIA",
+                "credits": "6",
+                "groups": []
+            }
+        },
+        {
+            "L000081": {
+                "name": "Estadistica Descriptiva y exploratoria",
+                "code": "L000081",
+                "type": "FUND. OPTATIVA",
+                "credits": "4",
+                "groups": []
+            }
+        }
     ]
 }

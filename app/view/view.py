@@ -1,5 +1,8 @@
 import streamlit as st
 from controllers.controller import Controller
+from view.events_page import events_page
+from view.home_page import home_page
+from view.json_page import json_page
 
 class View:
     def __init__(self):
@@ -9,26 +12,26 @@ class View:
         self.quit_ugly_widgets()
 
     def show(self):
-        st.title('MyLearnCoach')
+            
+        st.title('🎓 MyLearnCoach')
 
-        prompt = st.text_input('¿En que te puedo ayudar?') 
-    
-        if prompt:
-            self.controller.process_input(prompt)
+        page_names_to_funcs = {
+            "🏠 Inicio": lambda : home_page(self),
+            "📅 Eventos": events_page,
+            '📊 Datos': json_page,
+        }
 
-        # Sección de cursos
-        st.header("Cursos")
-
-        # Mostrar todos los cursos en 3 columnas
-        i = 0
-        # for rows in range(len(self.data['SIACourses'])//3):
-        #     for col in st.columns(3):
-        #         # Escribir nombre y código
-        #         col.write(self.data['SIACourses'][i]["name"] + self.data['SIACourses'][i]["code"])
-        #         i += 1
+        with st.sidebar:
+            st.header('Menú')
+            
+            demo_name = st.selectbox("Escoge una página", page_names_to_funcs.keys())
+            
+        page_names_to_funcs[demo_name]()
     
     def quit_ugly_widgets(self):
         # Quita algunos elementos molestos
+        st.set_page_config(layout="wide")
+
         st.markdown("""
         <style>
             .css-9s5bis.edgvbvh3 {

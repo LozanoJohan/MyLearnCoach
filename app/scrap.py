@@ -1,5 +1,10 @@
 from controllers.coursera_scrapper import CourseraScrapper 
+from controllers.sia_scrapper import SiaScrapper
 
-scrapper = CourseraScrapper()
+scrapper = SiaScrapper()
+scrapper.scrap()
 
-scrapper.scrap(4)
+if False:
+    scrapper = CourseraScrapper()
+
+    scrapper.scrap(4)
