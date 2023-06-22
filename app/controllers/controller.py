@@ -11,6 +11,12 @@ from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
 
+from langchain.llms import GPT4All
+
+local_path = (
+    "C:/Users/Usuario/AppData/Local/nomic.ai/GPT4All/GPT4All-13B-snoozy.ggmlv3.q4_0.bin"  # replace with your desired local file path
+)
+
 class Controller:
     def __init__(self): # , view):
         # self.view = view
@@ -52,6 +58,10 @@ class Controller:
     
     def set_llm(self):
         
+        template = """Question: {question}
+
+        Respuesta:."""
+
         self.title_template = PromptTemplate(
             input_variables = ['topic'], 
             template='{topic}'
@@ -62,7 +72,7 @@ class Controller:
             template = 'Escribe la o las palabras principales para poder buscar acerca de este tema: {title}' #'dame los temas que se necesitarian para entender la siguiente informacion INFORMACION: {title}'
         )
 
-        self.llm = OpenAI(temperature=0.9) 
+        self.llm = GPT4All(model=local_path, verbose=True)
 
         self.title_chain = LLMChain(llm = self.llm, prompt = self.title_template, verbose = True, output_key = 'title')
         self.script_chain = LLMChain(llm = self.llm, prompt = self.script_template, verbose = True, output_key = 'script')
