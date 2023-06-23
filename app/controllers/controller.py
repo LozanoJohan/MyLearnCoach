@@ -22,10 +22,9 @@ from langchain.chains import LLMChain, SequentialChain
 # )
 
 from pathlib import Path
+# Obtener la ruta absoluta del archivo 
+json_path = Path(__file__).resolve().parent.parent / 'data' / 'courses_data.json'
 
-# Obtener la ruta absoluta del archivo en otra carpeta
-carpeta = Path('./data')
-json_path = carpeta / 'courses_data.json'
 
 class Controller:
     def __init__(self): # , view):
