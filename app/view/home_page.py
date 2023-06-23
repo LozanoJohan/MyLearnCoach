@@ -44,8 +44,15 @@ def home_page(view):
 
     with col2:
         sub_col1, sub_col2 = st.columns(2)
-        query_type = sub_col1.selectbox("Buscar por:", ["Default", "Nombre", "Código"])
+        query_type = sub_col1.selectbox("Buscar por:", ["----", "Nombre", "Código"])
         query = sub_col2.text_input("", query, placeholder='🔎 Buscar')
+
+    school_box, carreer_box, update_btn = st.columns(3)
+
+    school_box.selectbox('Facultad', ['----', 'Facultad de Ingeniería', 'Facultad de Ciencias Econámicas', 'Facultad de Ciencias de la Computación', 'Facultad de Ciencias Sociales'])
+    carreer_box.selectbox('Carrera', ['----', 'Ingeniería', 'Ciencias Econámicas', 'Ciencias de la Computación', 'Ciencias Sociales'])
+    update_btn.write('--')
+    update_btn.button("Actualizar", on_click=view.controller.fetch_sia_courses)
     
     sia_courses = view.controller.get_sia_courses(query_type, query)
     # Mostrar todos los cursos en 3 columnas

@@ -2,8 +2,9 @@ from dotenv import load_dotenv
 
 from controllers.sia_scrapper import SiaScrapper
 from controllers.coursera_scrapper import CourseraScrapper
-from models.courses import SIACourse
-from models.courses import CourseraCourse
+from models.sia_course import SIACourse
+from models.sia_course import Group
+from models.coursera_course import CourseraCourse
 
 import json
 import os
@@ -12,11 +13,13 @@ from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
 
-'''Esto en caso de que nos quedemos sin apykey y no tengamos plata pa pagarla'''
-
 from pathlib import Path
-# Obtener la ruta absoluta del archivo 
+
+
+
+# Ruta absoluta de el archivo con los datos
 json_path = Path(__file__).resolve().parent.parent / 'data' / 'courses_data.json'
+
 
 
 class Controller:
@@ -27,7 +30,7 @@ class Controller:
 
         self.set_llm()
     
-    def fetch_sia_courses():
+    def fetch_sia_courses(self):
         sia = SiaScrapper()
         courses = sia.scrap()
 
@@ -97,43 +100,47 @@ class Controller:
         with open(json_path, "r") as file:
             data = json.load(file)
 
-        if query_type == 'Nombre':
+        query_parser = {'Nombre':'name','Código':'code','----':'default'}
 
-            for course in data['SIACourses']:
-                course_data = list(course.values())[0]
+        for course in data['SIACourses']:
+            course_data = list(course.values())[0]
 
-                if course_data['name'] == query:
-                    courses.append(SIACourse(course_data['name'], 
-                                         "course_data['professor']", 
+            if query_parser[query_type] == 'default':
+                groups = []
+
+                if 'groups' not in course_data:
+                    course_data['groups'] = ''
+
+                for group_data in course_data['groups']:
+                    group = Group(group_data['id'], group_data['schedule'], group_data['professor'])
+                    groups.append(group)
+
+                course =  SIACourse(course_data['name'], 
+                                         groups, 
                                          "course_data['description']", 
                                          course_data['code'], 
                                          course_data['credits'], 
-                                         course_data['type']))
+                                         course_data['type'])                    
+                courses.append(course)
+                
+            elif course_data[query_parser[query_type]] == query:
+                groups = []
+
+                if 'groups' not in course_data:
+                    course_data['groups'] = ''
+
+                for group_data in course_data['groups']:
+                    group = Group(group_data['id'], group_data['schedule'], group_data['professor'])
+                    groups.append(group)
+
+                course =  SIACourse(course_data['name'], 
+                                        groups, 
+                                        "course_data['description']", 
+                                        course_data['code'], 
+                                        course_data['credits'], 
+                                        course_data['type'])                    
+                courses.append(course)
             
-        elif query_type == 'Código':
-
-            for course in data['SIACourses']:
-                course_data = list(course.values())[0]
-
-                if course_data['code'] == query:
-                    courses.append(SIACourse(course_data['name'], 
-                                         "course_data['professor']", 
-                                         "course_data['description']", 
-                                         course_data['code'], 
-                                         course_data['credits'], 
-                                         course_data['type']))
-                    
-        else:
-
-            for course in data['SIACourses']:
-                course_data = list(course.values())[0]
-                courses.append(SIACourse(course_data['name'], 
-                                         "course_data['professor']", 
-                                         "course_data['description']", 
-                                         course_data['code'], 
-                                         course_data['credits'], 
-                                         course_data['type']))
-
         return courses
     
     def get_coursera_courses(self, query:str):
