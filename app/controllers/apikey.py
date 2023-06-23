@@ -1,1 +1,1 @@
-apikey = "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"
+apikey = "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"

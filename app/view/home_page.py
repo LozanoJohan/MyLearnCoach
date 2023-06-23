@@ -14,6 +14,7 @@ def home_page(view):
         coursera_courses, keywords = view.controller.get_coursera_courses(response["script"])
 
         st.markdown(f'<h2>Cursos recomendados acerca de {keywords[0]}</h2>', unsafe_allow_html=True)
+        st.write('Coursera')
 
         if len(coursera_courses) == 0:
             st.write("No se encontraron cursos")
