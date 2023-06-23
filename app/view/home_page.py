@@ -11,7 +11,7 @@ def home_page(view):
 
     # Sección de cursos
     st.header("Cursos")
-
+    
     # Mostrar todos los cursos en 3 columnas
     i = 0
 
@@ -20,5 +20,7 @@ def home_page(view):
     for rows in range(len(sia_courses)//3):
         for col in st.columns(3):
             # Escribir nombre y código
-            col.write(sia_courses[i].name + sia_courses[i].code)
+            col.markdown(f'**{sia_courses[i].name}** {sia_courses[i].code}')
             i += 1
+
+        st.divider()

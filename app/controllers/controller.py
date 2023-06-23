@@ -20,6 +20,7 @@ from langchain.chains import LLMChain, SequentialChain
 # local_path = (
 #     "D:/Users/Usuario/Documents/GitHub/MyLearnCoach/app/GPT4All-13B-snoozy.ggmlv3.q4_0.bin"  # replace with your desired local file path
 # )
+json_path = '../app/data/courses_data.json'
 
 class Controller:
     def __init__(self): # , view):
@@ -54,7 +55,7 @@ class Controller:
     
     def get_data(self):
         # Read courses from JSON file
-        with open('D:/Users/Usuario/Documents/GitHub/MyLearnCoach/app/data/courses_data.json', 'r') as f:
+        with open(json_path, 'r') as f:
             courses = json.load(f)
             f.close()
 
@@ -95,9 +96,11 @@ class Controller:
     
 
     def get_sia_courses(self, query):
+        from pathlib import Path
         courses = []
+        
         # Read from json file
-        with open('D:/Users/Usuario/Documents/GitHub/MyLearnCoach/app/data/courses_data.json', "r") as file:
+        with open(json_path, "r") as file:
             data = json.load(file)
             for course in data['SIACourses']:
                 course_data = list(course.values())[0]
