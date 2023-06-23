@@ -1,4 +1,4 @@
-from controllers.apikey import apikey
+from apikey import apikey
 
 from controllers.sia_scrapper import SiaScrapper
 from controllers.coursera_scrapper import CourseraScrapper
