@@ -9,7 +9,7 @@ class View:
         self.controller = Controller()
         self.data = self.controller.get_data()
         
-        #self.quit_ugly_widgets()
+        self.quit_ugly_widgets()
 
     def show(self):
             
@@ -32,13 +32,13 @@ class View:
         # Quita algunos elementos molestos
         st.set_page_config(layout="wide")
 
-        st.markdown("""
-        <style>
-            .css-9s5bis.edgvbvh3 {
-                visibility: hidden;
-            }
-        .css-h5rgaw 
-        {
-            visibility: hidden;
-        }
-        """, unsafe_allow_html=True)
+        # st.markdown("""
+        # <style>
+        #     .css-9s5bis.edgvbvh3 {
+        #         visibility: hidden;
+        #     }
+        # .css-h5rgaw 
+        # {
+        #     visibility: hidden;
+        # }
+        # """, unsafe_allow_html=True)

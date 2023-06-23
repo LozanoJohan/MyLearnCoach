@@ -3,10 +3,10 @@ from controllers.apikey import apikey
 from controllers.sia_scrapper import SiaScrapper
 from controllers.coursera_scrapper import CourseraScrapper
 from models.courses import SIACourse
+from models.courses import CourseraCourse
 
 import json
 import os
-import streamlit as st 
 
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
@@ -74,7 +74,7 @@ class Controller:
 
         self.script_template = PromptTemplate(
             input_variables = ['title'], 
-            template = 'Escribe la o las palabras principales para poder buscar acerca de este tema: {title}' #'dame los temas que se necesitarian para entender la siguiente informacion INFORMACION: {title}'
+            template = 'Escribe la o las palabras principales para poder buscar acerca de este tema: {title}'
         )
 
         #self.llm = GPT4All(model=local_path, verbose=True)
@@ -91,17 +91,44 @@ class Controller:
     def process_input(self, input):
 
         response = self.sequential_chain({'topic': input})
-        st.write(response['title'])
-        st.write(response['script'])
+        return response
     
 
-    def get_sia_courses(self, query):
-        from pathlib import Path
+    def get_sia_courses(self, query_type, query):
         courses = []
-        
+
         # Read from json file
         with open(json_path, "r") as file:
             data = json.load(file)
+
+        if query_type == 'Nombre':
+
+            for course in data['SIACourses']:
+                course_data = list(course.values())[0]
+
+                if course_data['name'] == query:
+                    courses.append(SIACourse(course_data['name'], 
+                                         "course_data['professor']", 
+                                         "course_data['description']", 
+                                         course_data['code'], 
+                                         course_data['credits'], 
+                                         course_data['type']))
+            
+        elif query_type == 'Código':
+
+            for course in data['SIACourses']:
+                course_data = list(course.values())[0]
+
+                if course_data['code'] == query:
+                    courses.append(SIACourse(course_data['name'], 
+                                         "course_data['professor']", 
+                                         "course_data['description']", 
+                                         course_data['code'], 
+                                         course_data['credits'], 
+                                         course_data['type']))
+                    
+        else:
+
             for course in data['SIACourses']:
                 course_data = list(course.values())[0]
                 courses.append(SIACourse(course_data['name'], 
@@ -112,3 +139,46 @@ class Controller:
                                          course_data['type']))
 
         return courses
+    
+    def get_coursera_courses(self, query:str):
+        courses = []
+        #import streamlit as st
+
+        query = query.replace('"', '').lower()
+        try:
+            _ = query.split(':')
+            #st.write(_[1])
+            keywords = _[1].split(',')
+        except:
+            keywords = query.split(',')
+        
+        #for keyword in keywords:
+            # st.write(keyword)
+            # st.write(keyword in 'Introduction to Data Science')
+        # Read from json file
+        with open(json_path, "r") as file:
+            data = json.load(file)
+
+        for course_data in data['CourseraCourses']:
+
+            for keyword in keywords:
+                
+                # st.write(course_data['name'].lower())
+                # st.write('Keword:', keyword, 'Nombre:', course_data['name'].lower(), keyword in course_data['name'].lower())
+                if keyword in course_data['name'].lower():
+
+                    course = CourseraCourse(course_data['name'], 
+                                         "course_data['professor']", 
+                                         "course_data['description']", 
+                                         course_data['url'], 
+                                         "course_data['skills']", 
+                                         course_data['score'],
+                                         course_data['reviews']
+                                         )
+                    courses.append(course)
+
+                    #st.markdown(f"**{course}**")
+            
+            
+        return courses, keywords
+
