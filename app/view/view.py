@@ -9,7 +9,7 @@ class View:
         self.controller = Controller()
         self.data = self.controller.get_data()
         
-        self.quit_ugly_widgets()
+        #self.quit_ugly_widgets()
 
     def show(self):
             

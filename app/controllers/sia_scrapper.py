@@ -149,8 +149,8 @@ class SiaScrapper:
                         if str(key) == code:
                             _course_data = course
                             break
-                else: 
-                    data['SIACourses'].append({code: course})
+                    else: 
+                        data['SIACourses'].append({code: course})
 
             with open(json_route, 'w') as f:
                 json.dump(data, f, indent = 4)

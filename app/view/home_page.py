@@ -1,4 +1,5 @@
 import streamlit as st
+from controllers.controller import Controller
 
 def home_page(view):
 
@@ -13,8 +14,11 @@ def home_page(view):
 
     # Mostrar todos los cursos en 3 columnas
     i = 0
-    # for rows in range(len(self.data['SIACourses'])//3):
-    #     for col in st.columns(3):
-    #         # Escribir nombre y código
-    #         col.write(self.data['SIACourses'][i]["name"] + self.data['SIACourses'][i]["code"])
-        #         i += 1
+
+    sia_courses = Controller().get_sia_courses(None)
+
+    for rows in range(len(sia_courses)//3):
+        for col in st.columns(3):
+            # Escribir nombre y código
+            col.write(sia_courses[i].name + sia_courses[i].code)
+            i += 1

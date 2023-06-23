@@ -23,15 +23,6 @@ class CourseraCourse(Course):
         self.skills = skills
         self.score = score
         self.duration = duration
-    
-    def from_json(json_data):
-        '''Convierte un json a un objeto de tipo Course de coursera
-        json_data: json a convertir
-        return: Course de coursera
-        '''
-
-        data = json.loads(json_data)
-        return CourseraCourse(data['name'], data['professor'], data['description'], data['url'], data['skills'], data['score'], data['duration'])
 
     def to_json(self):
         '''Convierte un objeto de tipo Course de coursera a un json
@@ -41,21 +32,12 @@ class CourseraCourse(Course):
         return json.dumps(self.__dict__)
 
 class SIACourse(Course):
-    def __init__(self, name, professor, description, id, credits, type):
+    def __init__(self, name, professor, description, code, credits, type):
         super().__init__(name, professor, description)
 
-        self.id = id
+        self.code = code
         self.credits = credits
         self.type = type
-    
-    def from_json(json_data):
-        '''Convierte un json a un objeto de tipo Course del SIA
-        json_data: json a convertir
-        return: Course de coursera
-        '''
-
-        data = json.loads(json_data)
-        return SIACourse(data['name'], data['professor'], data['description'], data['id'], data['credits'], data['type'])
     
     def to_json(self):
         '''Convierte un objeto de tipo Course de coursera a un json
@@ -63,3 +45,6 @@ class SIACourse(Course):
         '''
         
         return json.dumps(self.__dict__)
+    
+    def __str__(self):
+        return super().__str__() + f' - {self.code} - {self.credits} - {self.type}'

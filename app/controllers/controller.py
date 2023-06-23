@@ -2,6 +2,7 @@ from controllers.apikey import apikey
 
 from controllers.sia_scrapper import SiaScrapper
 from controllers.coursera_scrapper import CourseraScrapper
+from models.courses import SIACourse
 
 import json
 import os
@@ -11,11 +12,14 @@ from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
 
-from langchain.llms import GPT4All
+'''Esto en caso de que nos quedemos sin apykey y no tengamos plata pa pagarla'''
 
-local_path = (
-    "C:/Users/Usuario/AppData/Local/nomic.ai/GPT4All/GPT4All-13B-snoozy.ggmlv3.q4_0.bin"  # replace with your desired local file path
-)
+# from langchain.llms import GPT4All
+
+# # Get GPT4All model
+# local_path = (
+#     "D:/Users/Usuario/Documents/GitHub/MyLearnCoach/app/GPT4All-13B-snoozy.ggmlv3.q4_0.bin"  # replace with your desired local file path
+# )
 
 class Controller:
     def __init__(self): # , view):
@@ -72,7 +76,8 @@ class Controller:
             template = 'Escribe la o las palabras principales para poder buscar acerca de este tema: {title}' #'dame los temas que se necesitarian para entender la siguiente informacion INFORMACION: {title}'
         )
 
-        self.llm = GPT4All(model=local_path, verbose=True)
+        #self.llm = GPT4All(model=local_path, verbose=True)
+        self.llm = OpenAI(verbose=True, temperature=0.7)
 
         self.title_chain = LLMChain(llm = self.llm, prompt = self.title_template, verbose = True, output_key = 'title')
         self.script_chain = LLMChain(llm = self.llm, prompt = self.script_template, verbose = True, output_key = 'script')
@@ -87,3 +92,20 @@ class Controller:
         response = self.sequential_chain({'topic': input})
         st.write(response['title'])
         st.write(response['script'])
+    
+
+    def get_sia_courses(self, query):
+        courses = []
+        # Read from json file
+        with open('D:/Users/Usuario/Documents/GitHub/MyLearnCoach/app/data/courses_data.json', "r") as file:
+            data = json.load(file)
+            for course in data['SIACourses']:
+                course_data = list(course.values())[0]
+                courses.append(SIACourse(course_data['name'], 
+                                         "course_data['professor']", 
+                                         "course_data['description']", 
+                                         course_data['code'], 
+                                         course_data['credits'], 
+                                         course_data['type']))
+
+        return courses
