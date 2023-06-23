@@ -25,6 +25,8 @@ class View:
             st.header('Menú')
             
             demo_name = st.selectbox("Escoge una página", page_names_to_funcs.keys())
+
+            st.text_input('Tu OpenAI API key')
             
         page_names_to_funcs[demo_name]()
     
