@@ -1,4 +1,4 @@
-from apikey import apikey
+from dotenv import load_dotenv
 
 from controllers.sia_scrapper import SiaScrapper
 from controllers.coursera_scrapper import CourseraScrapper
@@ -14,25 +14,17 @@ from langchain.chains import LLMChain, SequentialChain
 
 '''Esto en caso de que nos quedemos sin apykey y no tengamos plata pa pagarla'''
 
-# from langchain.llms import GPT4All
-
-# # Get GPT4All model
-# local_path = (
-#     "D:/Users/Usuario/Documents/GitHub/MyLearnCoach/app/GPT4All-13B-snoozy.ggmlv3.q4_0.bin"  # replace with your desired local file path
-# )
-
 from pathlib import Path
 # Obtener la ruta absoluta del archivo 
 json_path = Path(__file__).resolve().parent.parent / 'data' / 'courses_data.json'
 
 
 class Controller:
-    def __init__(self): # , view):
-        # self.view = view
+    def __init__(self):
 
-        # self.view.show()
+        load_dotenv()
+        api_key = os.getenv('OPENAI_API_KEY')
 
-        os.environ['OPENAI_API_KEY'] = apikey
         self.set_llm()
     
     def fetch_sia_courses():
