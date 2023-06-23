@@ -11,3 +11,35 @@ For running locally:
 - streamlit run main.py
 - 
 ![mylearncoach](https://github.com/LozanoJohan/MyLearnCoach/assets/108693709/c4424823-ee6b-4c0b-b0f7-08ad33c34250)
+
+# Nombre del Proyecto
+
+Breve descripción del proyecto.
+
+## Tabla de Contenidos
+
+- [Instrucciones de Instalación](#instrucciones-de-instalación)
+- [Ejemplos de Uso](#ejemplos-de-uso)
+- [Documentación](#documentación)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
+- [Contacto](#contacto)
+
+## Instrucciones de Instalación
+
+1. Clona el repositorio: `git clone https://github.com/tu-usuario/tu-proyecto.git`
+2. Ingresa al directorio del proyecto: `cd tu-proyecto`
+3. Instala las dependencias: `pip install -r requirements.txt`
+4. Configura las variables de entorno en un archivo `.env`
+5. Ejecuta la aplicación: `python app.py`
+
+## Ejemplos de Uso
+
+Aquí puedes mostrar algunos ejemplos de cómo utilizar tu proyecto:
+
+```python
+# Ejemplo de código
+def ejemplo():
+    print("Hola, mundo!")
+
+ejemplo()
