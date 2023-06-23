@@ -20,7 +20,7 @@ from langchain.chains import LLMChain, SequentialChain
 # local_path = (
 #     "D:/Users/Usuario/Documents/GitHub/MyLearnCoach/app/GPT4All-13B-snoozy.ggmlv3.q4_0.bin"  # replace with your desired local file path
 # )
-json_path = '../app/data/courses_data.json'
+json_path = './data/courses_data.json'
 
 class Controller:
     def __init__(self): # , view):
