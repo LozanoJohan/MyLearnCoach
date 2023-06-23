@@ -26,7 +26,7 @@ class Controller:
     def __init__(self):
 
         load_dotenv()
-        api_key = os.getenv('OPENAI_API_KEY')
+        os.getenv('OPENAI_API_KEY')
 
         self.set_llm()
     
