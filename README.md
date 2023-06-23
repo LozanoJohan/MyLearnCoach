@@ -3,6 +3,8 @@
 Un asistente de inteligencia artificial open-source y una aplicación para estudiantes de la UNAL.  
 Paco Jiménez, tu chatbot de IA, te ayudará en tu proceso de aprendizaje, te recomendará cursos disponibles para estudiantes de la UNAL en Coursera y en el SIA.
 
+[Correr app en tu navegador](https://mylearncoach.streamlit.app/)
+
 ## Tabla de Contenidos
 
 - [Instrucciones de Instalación](#instrucciones-de-instalación)
