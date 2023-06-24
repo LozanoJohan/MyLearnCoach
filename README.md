@@ -5,11 +5,11 @@ Paco Jiménez, tu chatbot de IA, te ayudará en tu proceso de aprendizaje, te re
 
 [Correr app en tu navegador](https://mylearncoach.streamlit.app/)
 
+![mylearncoach](https://github.com/LozanoJohan/MyLearnCoach/assets/108693709/c4424823-ee6b-4c0b-b0f7-08ad33c34250)
+
 ## Tabla de Contenidos
 
 - [Instrucciones de Instalación](#instrucciones-de-instalación)
-- [Ejemplos de Uso](#ejemplos-de-uso)
-- [Funcionalidades](#funcionalidades)
 - [Contribución](#contribución)
 - [Licencia](#licencia)
 - [Contacto](#contacto)
@@ -21,10 +21,6 @@ Paco Jiménez, tu chatbot de IA, te ayudará en tu proceso de aprendizaje, te re
 3. Instala las dependencias: `pip install -r requirements.txt`
 4. Configura las variables de entorno en un archivo `.env`
 5. Ejecuta la aplicación: `stramlit run main.py`
-
-## Funcionalidades
-
-![mylearncoach](https://github.com/LozanoJohan/MyLearnCoach/assets/108693709/c4424823-ee6b-4c0b-b0f7-08ad33c34250)
 
 ## Contribución
 
