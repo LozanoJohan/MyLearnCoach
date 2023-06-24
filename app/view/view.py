@@ -4,7 +4,6 @@ from view.events_page import events_page
 from view.home_page import home_page
 from view.json_page import json_page
 
-from view.apikey import apikey
 
 class View:
     def __init__(self):
