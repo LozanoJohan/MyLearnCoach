@@ -26,7 +26,14 @@ class View:
             
             demo_name = st.selectbox("Escoge una página", page_names_to_funcs.keys())
 
-            st.text_input('Tu OpenAI API key')
+            custom_api_key =st.text_input('Tu OpenAI API key', type = 'password')
+
+            if custom_api_key:
+                self.controller.set_api_key(custom_api_key)
+            
+            st.write('Puedes usar esta hasta que se acabe')
+            st.write('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')
+            st.write('¿No funciona? Prueba con tu <a href="https://platform.openai.com/account/api-keys">API key</a>', unsafe_allow_html=True)
             
         page_names_to_funcs[demo_name]()
     

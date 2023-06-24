@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+import dotenv
 
 from controllers.sia_scrapper import SiaScrapper
 from controllers.coursera_scrapper import CourseraScrapper
@@ -25,10 +25,13 @@ json_path = Path(__file__).resolve().parent.parent / 'data' / 'courses_data.json
 class Controller:
     def __init__(self):
 
-        load_dotenv()
+        dotenv.load_dotenv()
         os.getenv('OPENAI_API_KEY')
 
         self.set_llm()
+    
+    def set_api_key(self, api_key):
+        os.environ['OPENAI_API_KEY'] = api_key
     
     def fetch_sia_courses(self):
         sia = SiaScrapper()
