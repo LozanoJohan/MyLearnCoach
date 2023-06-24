@@ -32,7 +32,7 @@ class View:
                 self.controller.set_api_key(custom_api_key)
             
             st.write('Puedes usar esta hasta que se acabe')
-            st.write(':green[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]')
+            st.write(':green[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]')
             st.write('¿No funciona? Prueba con tu <a href="https://platform.openai.com/account/api-keys">API key</a>', unsafe_allow_html=True)
             
         page_names_to_funcs[demo_name]()
