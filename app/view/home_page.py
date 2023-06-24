@@ -13,8 +13,10 @@ def home_page(view):
 
         coursera_courses, keywords = view.controller.get_coursera_courses(response["script"])
 
+        print('First keyword: ', keywords[0], 'Keyword:', keywords)
+
         st.markdown(f'<h2>Cursos recomendados acerca de {keywords[0]}</h2>', unsafe_allow_html=True)
-        st.write('Coursera')
+        st.subheader('Coursera')
 
         if len(coursera_courses) == 0:
             st.write("No se encontraron cursos")
@@ -37,6 +39,15 @@ def home_page(view):
                 i += 1
 
             st.divider()
+    
+    else:
+        st.markdown(f'<h2>Cursos recomendados acerca de </h2>', unsafe_allow_html=True)
+
+        st.subheader('Coursera')
+        st.write('Parece que aún no me has preguntado nada')
+
+        st.subheader('SIA')
+        st.write('Parece que aún no me has preguntado nada')
 
     # Sección de cursos
     col1, col2 = st.columns(2)
