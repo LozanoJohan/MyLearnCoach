@@ -5,6 +5,7 @@ from view.home_page import home_page
 from view.json_page import json_page
 
 
+
 class View:
     def __init__(self):
         self.controller = Controller()
@@ -33,7 +34,7 @@ class View:
                 self.controller.set_api_key(custom_api_key)
             
             st.write('Puedes usar esta hasta que se acabe')
-            st.write(f':green[{apikey}]')
+            st.write(f':green[{st.secrets["openai_api_key"]}]')
             st.write('¿No funciona? Prueba con tu <a href="https://platform.openai.com/account/api-keys">API key</a>', unsafe_allow_html=True)
             
         page_names_to_funcs[demo_name]()
