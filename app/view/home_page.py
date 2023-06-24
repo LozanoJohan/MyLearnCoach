@@ -4,7 +4,7 @@ def home_page(view):
     query = ''
 
     st.balloons()
-    prompt = st.text_input('¿En que te puedo ayudar?') 
+    prompt = st.text_input('¿En que te puedo ayudar?', placeholder='Quiero aprender data science') 
     
     if prompt:
         response = view.controller.process_input(prompt)
