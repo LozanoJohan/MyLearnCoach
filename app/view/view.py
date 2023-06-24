@@ -26,7 +26,7 @@ class View:
             
             demo_name = st.selectbox("Escoge una página", page_names_to_funcs.keys())
 
-            custom_api_key =st.text_input('Tu OpenAI API key', type = 'password')
+            custom_api_key =st.text_input('Tu OpenAI API key', type = 'password', placeholder='Requerido')
 
             if custom_api_key:
                 self.controller.set_api_key(custom_api_key)
