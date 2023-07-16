@@ -70,15 +70,15 @@ def home_page(view):
     # Mostrar todos los cursos en 3 columnas
     i = 0
 
-    st.write(sia_courses)
+
     for rows in range(len(sia_courses)//3 + 1):
         for col in st.columns(3):
             # Escribir nombre y código
             try:
-                col.markdown(f'''**{sia_courses[i].name}** {sia_courses[i].code}<br>
+                col.markdown(f'''**{sia_courses[i]["name"]}** {sia_courses[i]["code"]}<br>
                              ---------------------------------------------------------------<br>
-                             Créditos: {sia_courses[i].credits}<br>
-                             Tipología: {sia_courses[i].type}''', unsafe_allow_html=True)
+                             Créditos: {sia_courses[i]["credits"]}<br>
+                             Tipología: {sia_courses[i]["type"]}''', unsafe_allow_html=True)
             except:
                 continue
             
