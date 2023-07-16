@@ -95,7 +95,7 @@ class Controller:
 
         for course in data:
             import streamlit as st
-            st.write(course, data)
+            st.write(course.values()[0])
             if query_parser[query_type] == 'default':
                 groups = []
 
