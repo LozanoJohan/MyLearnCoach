@@ -70,6 +70,7 @@ def home_page(view):
     # Mostrar todos los cursos en 3 columnas
     i = 0
 
+    st.write(sia_courses)
     for rows in range(len(sia_courses)//3 + 1):
         for col in st.columns(3):
             # Escribir nombre y código
