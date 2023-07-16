@@ -1,5 +1,5 @@
 from models.course import Course
-import json
+
 
 class Group:
     '''
@@ -13,7 +13,7 @@ class Group:
         self.professor = professor
 
 class SIACourse(Course):
-    
+
     def __init__(self, name, groups, description, code, credits, type):
         super().__init__(name, description)
         

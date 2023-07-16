@@ -1,5 +1,5 @@
 import streamlit as st
-from app.view.view import View
+from view.view import View
 
 def home_page(view:View):
     query = ''
