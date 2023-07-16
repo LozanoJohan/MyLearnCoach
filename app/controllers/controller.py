@@ -94,17 +94,19 @@ class Controller:
         query_parser = {'Nombre':'name','Código':'code','----':'default'}
 
 
-        for code, course_data in data.items():
-            if query_parser[query_type] == 'name':
-                if course_data['name'] == query:
-                    courses.append(course_data)
+        if query_parser[query_type] == 'code':
 
-            elif query_parser[query_type] == 'code':
-                if query in data:
-                    courses.append(data[query])
+            courses = [course_data for course_data in data.values() if course_data['code'] == query]
 
-            elif query_parser[query_type] == 'default':
-                courses.append(course_data)
+
+        elif query_parser[query_type] == 'name':
+
+            courses = [course_data for course_data in data.values() if course_data['name'] == query]
+
+
+        elif query_parser[query_type] == 'default':
+
+            courses = [course_data for course_data in data.values()]
 
 
         # for id, course_data in data.items():
