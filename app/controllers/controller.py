@@ -93,39 +93,52 @@ class Controller:
 
         query_parser = {'Nombre':'name','Código':'code','----':'default'}
 
-        for course in data:
-            import streamlit as st
-            st.write(course.values()[0])
-            if query_parser[query_type] == 'default':
-                groups = []
 
-                if 'groups' not in course:
-                    course['groups'] = ''
+        for code, course_data in data.items():
+            if query_parser[query_type] == 'name':
+                if course_data['name'] == query:
+                    courses.append(course_data)
 
-                for group_data in course['groups']:
-                    group = Group( **group_data )
-                    groups.append(group)
+            elif query_parser[query_type] == 'code':
+                if query in data:
+                    courses.append(data[query])
 
-                course =  SIACourse(groups=groups, **course)                    
-                courses.append(course)
+            elif query_parser[query_type] == 'default':
+                courses.append(course_data)
+
+
+        # for id, course_data in data.items():
+
+        #     if query_parser[query_type] == 'default':
+        #         groups = []
+
+        #         if 'groups' not in course:
+        #             course['groups'] = ''
+
+        #         for group_data in course['groups']:
+        #             group = Group( **group_data )
+        #             groups.append(group)
+
+        #         course =  SIACourse(groups=groups, **course)                    
+        #         courses.append(course)
                 
-            elif course[query_parser[query_type]] == query:
-                groups = []
+        #     elif course[query_parser[query_type]] == query:
+        #         groups = []
 
-                if 'groups' not in course:
-                    course['groups'] = ''
+        #         if 'groups' not in course:
+        #             course['groups'] = ''
 
-                for group_data in course['groups']:
-                    group = Group( **group_data )
-                    groups.append(group)
+        #         for group_data in course['groups']:
+        #             group = Group( **group_data )
+        #             groups.append(group)
 
-                course =  SIACourse(course['name'], 
-                                        groups, 
-                                        "course['description']", 
-                                        course['code'], 
-                                        course['credits'], 
-                                        course['type'])                    
-                courses.append(course)
+        #         course =  SIACourse(course['name'], 
+        #                                 groups, 
+        #                                 "course['description']", 
+        #                                 course['code'], 
+        #                                 course['credits'], 
+        #                                 course['type'])                    
+        #         courses.append(course)
             
         return courses
     
