@@ -1,7 +1,7 @@
 import streamlit as st
-from view.view import View
 
-def home_page(view:View):
+
+def home_page(view):
     query = ''
 
     st.balloons()

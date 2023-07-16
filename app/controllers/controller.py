@@ -44,6 +44,13 @@ class Controller:
 
         return courses
     
+    def get_data(self):
+        # Read from json file
+        with open(json_path, "r") as file:
+            data = json.load(file)
+
+        return data
+    
     def set_llm(self):
         
         template = """Question: {question}
