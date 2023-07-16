@@ -16,14 +16,16 @@ class CourseraScrapper:
         self.driver = self.init_chrome()
         self.wait = WebDriverWait(self.driver, 10)
 
-        self.all_courses = {'CourseraCourses': []}
     
-    def scrap(self, minimo):
-        
-        url = "https://www.coursera.org/courses"
+    def scrap(self, query: str, minimo: int = 5):
+        courses = []
+
+        url = "https://www.coursera.org/programs/coursera-para-la-universidad-nacional-de-colombia-ji3sj/browse?query={}&source=search"
+        url = url.format(query.replace(' ', '+').strip())
+
         self.driver.get(url)
         
-        while len(self.all_courses['CourseraCourses']) < minimo:
+        while len(courses) < minimo:
             cont=0
 
             for _ in range(2):
@@ -49,11 +51,9 @@ class CourseraScrapper:
                         'reviews': data_course,
                     }
 
-                    self.all_courses['CourseraCourses'].append(course)
-                    print(self.all_courses)
+                    courses.append(course)
 
-                    with open('D:/Users/Usuario/Documents/GitHub/MyLearnCoach/app/data/courses_data.json', 'w') as f:
-                        json.dump(self.all_courses, f, indent = 4)
+                    print(self.all_courses)
 
                 except Exception as e:
                     logging.info('Lo sentimos, ocurrión un error: ', e)
@@ -62,7 +62,7 @@ class CourseraScrapper:
         elemento = self.wait.until(ec.element_to_be_clickable((By.CSS_SELECTOR, "button[aria-label='Próxima página']")))
         elemento.click()
 
-        return self.all_courses  
+        return courses
     
     def init_chrome(self):
 

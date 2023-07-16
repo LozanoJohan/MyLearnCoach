@@ -44,25 +44,6 @@ class Controller:
 
         return courses
     
-    def fetch_coursera_courses(self):
-        coursera = CourseraScrapper()
-        courses = coursera.scrap()
-
-        # Write courses to JSON file
-        with open('coursera_courses.json', 'w') as f:
-            json.dump(courses, f)
-            f.close()
-
-        return courses
-    
-    def get_data(self):
-        # Read courses from JSON file
-        with open(json_path, 'r') as f:
-            courses = json.load(f)
-            f.close()
-
-        return courses
-    
     def set_llm(self):
         
         template = """Question: {question}
@@ -105,7 +86,7 @@ class Controller:
 
         query_parser = {'Nombre':'name','Código':'code','----':'default'}
 
-        for course in data['SIACourses']:
+        for course in data:
             course_data = list(course.values())[0]
 
             if query_parser[query_type] == 'default':
@@ -115,15 +96,10 @@ class Controller:
                     course_data['groups'] = ''
 
                 for group_data in course_data['groups']:
-                    group = Group(group_data['id'], group_data['schedule'], group_data['professor'])
+                    group = Group( **group_data )
                     groups.append(group)
 
-                course =  SIACourse(course_data['name'], 
-                                         groups, 
-                                         "course_data['description']", 
-                                         course_data['code'], 
-                                         course_data['credits'], 
-                                         course_data['type'])                    
+                course =  SIACourse(groups=groups, **course_data)                    
                 courses.append(course)
                 
             elif course_data[query_parser[query_type]] == query:
@@ -133,7 +109,7 @@ class Controller:
                     course_data['groups'] = ''
 
                 for group_data in course_data['groups']:
-                    group = Group(group_data['id'], group_data['schedule'], group_data['professor'])
+                    group = Group( **group_data )
                     groups.append(group)
 
                 course =  SIACourse(course_data['name'], 
@@ -162,29 +138,26 @@ class Controller:
             # st.write(keyword)
             # st.write(keyword in 'Introduction to Data Science')
         # Read from json file
-        with open(json_path, "r") as file:
-            data = json.load(file)
 
-        for course_data in data['CourseraCourses']:
+        for keyword in keywords:
 
-            for keyword in keywords:
-                
-                # st.write(course_data['name'].lower())
-                # st.write('Keword:', keyword, 'Nombre:', course_data['name'].lower(), keyword in course_data['name'].lower())
-                if keyword in course_data['name'].lower():
-
-                    course = CourseraCourse(course_data['name'], 
-                                         "course_data['professor']", 
-                                         "course_data['description']", 
-                                         course_data['url'], 
-                                         "course_data['skills']", 
-                                         course_data['score'],
-                                         course_data['reviews']
-                                         )
-                    courses.append(course)
-
-                    #st.markdown(f"**{course}**")
-            
-            
+            courses.append(CourseraScrapper.scrap(query=keyword))
+        
         return courses, keywords
+
+        # for course_data in data['CourseraCourses']:
+
+        #     for keyword in keywords:
+                
+        #         # st.write(course_data['name'].lower())
+        #         # st.write('Keword:', keyword, 'Nombre:', course_data['name'].lower(), keyword in course_data['name'].lower())
+        #         if keyword in course_data['name'].lower():
+
+        #             course = CourseraCourse( **course_data )
+        #             courses.append(course)
+
+        #             #st.markdown(f"**{course}**")
+            
+            
+        # return courses, keywords
 

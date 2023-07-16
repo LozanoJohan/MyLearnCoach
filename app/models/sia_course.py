@@ -13,6 +13,7 @@ class Group:
         self.professor = professor
 
 class SIACourse(Course):
+    
     def __init__(self, name, groups, description, code, credits, type):
         super().__init__(name, description)
         
@@ -21,13 +22,6 @@ class SIACourse(Course):
         self.credits = credits
         self.type = type
     
-    def to_json(self):
-        '''
-        Convierte un objeto de tipo Course de coursera a un json
-        return: json de Course de coursera
-        '''
-        
-        return json.dumps(self.__dict__)
     
     def __str__(self):
         return super().__str__() + f' - {self.code} - {self.credits} - {self.type}'
