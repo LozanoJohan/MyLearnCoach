@@ -94,7 +94,8 @@ class Controller:
         query_parser = {'Nombre':'name','Código':'code','----':'default'}
 
         for course in data:
-
+            import streamlit as st
+            st.write(course, data)
             if query_parser[query_type] == 'default':
                 groups = []
 
