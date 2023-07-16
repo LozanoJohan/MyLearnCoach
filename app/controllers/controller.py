@@ -94,37 +94,36 @@ class Controller:
         query_parser = {'Nombre':'name','Código':'code','----':'default'}
 
         for course in data:
-            course_data = list(course.values())[0]
 
             if query_parser[query_type] == 'default':
                 groups = []
 
-                if 'groups' not in course_data:
-                    course_data['groups'] = ''
+                if 'groups' not in course:
+                    course['groups'] = ''
 
-                for group_data in course_data['groups']:
+                for group_data in course['groups']:
                     group = Group( **group_data )
                     groups.append(group)
 
-                course =  SIACourse(groups=groups, **course_data)                    
+                course =  SIACourse(groups=groups, **course)                    
                 courses.append(course)
                 
-            elif course_data[query_parser[query_type]] == query:
+            elif course[query_parser[query_type]] == query:
                 groups = []
 
-                if 'groups' not in course_data:
-                    course_data['groups'] = ''
+                if 'groups' not in course:
+                    course['groups'] = ''
 
-                for group_data in course_data['groups']:
+                for group_data in course['groups']:
                     group = Group( **group_data )
                     groups.append(group)
 
-                course =  SIACourse(course_data['name'], 
+                course =  SIACourse(course['name'], 
                                         groups, 
-                                        "course_data['description']", 
-                                        course_data['code'], 
-                                        course_data['credits'], 
-                                        course_data['type'])                    
+                                        "course['description']", 
+                                        course['code'], 
+                                        course['credits'], 
+                                        course['type'])                    
                 courses.append(course)
             
         return courses
