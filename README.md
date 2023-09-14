@@ -36,5 +36,3 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 
 Johan Lozano - [Instagram](https://www.instagram.com/johanlozano51/) | jlozanol@unal.edu.co  
 Carlos Bermudez - cbermudezf@unal.edu.co
-
-Construido gracias a ChatGPT.
